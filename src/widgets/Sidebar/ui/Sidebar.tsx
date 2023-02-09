@@ -8,7 +8,7 @@ import Expand from "shared/assets/icons/expand.svg";
 import Shrink from "shared/assets/icons/shrink.svg";
 
 interface SidebarProps {
-  className?: string;
+  className?: string
 }
 export const Sidebar: FC<SidebarProps> = ({ className }) => {
   const [collapsed, setCollapsed] = useState(false);
@@ -18,22 +18,22 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
   };
 
   return (
-    <div
-      className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [
-        className,
-      ])}
-    >
-      <Button theme={ThemeButton.CLEAR} onClick={onToggle}>
-        {collapsed ? (
-          <Expand className={cls.expand} width={40} />
-        ) : (
-          <Shrink className={cls.expand} width={40} />
-        )}
-      </Button>
-      <div className={cls.switchers}>
-        <ThemeSwitcher />
-        <LangSwitcher />
+      <div
+        className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}
+      >
+          <Button theme={ThemeButton.CLEAR} onClick={onToggle}>
+            {collapsed
+                ? (
+                    <Expand className={cls.expand} width={40} />
+                  )
+                : (
+                    <Shrink className={cls.expand} width={40} />
+                  )}
+          </Button>
+          <div className={cls.switchers}>
+              <ThemeSwitcher />
+              <LangSwitcher />
+          </div>
       </div>
-    </div>
   );
 };
