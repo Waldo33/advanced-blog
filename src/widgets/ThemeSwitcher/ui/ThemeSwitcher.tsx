@@ -19,9 +19,9 @@ export const ThemeSwitcher: FC<ThemeSwitcherProps> = ({ className }) => {
       className={classNames(cls.ThemeSwitcher, {}, [className])}
     >
       {theme === Theme.DARK ? (
-        <DarkIcon width={30} />
+        <DarkIcon width={40} />
       ) : (
-        <LightIcon width={30} />
+        <LightIcon width={40} />
       )}
     </Button>
   );
