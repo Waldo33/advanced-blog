@@ -3,6 +3,8 @@
  * https://jestjs.io/docs/configuration
  */
 
+import path from 'path';
+
 export default {
     // The test environment that will be used for testing
     testEnvironment: 'jsdom',
@@ -18,7 +20,7 @@ export default {
     // An array of directory names to be searched recursively
     // up from the requiring module's location
     moduleDirectories: [
-        'node_modules',
+        'node_modules', 'src',
     ],
 
     // An array of file extensions your modules use
@@ -38,6 +40,11 @@ export default {
 
     // The root directory that Jest should scan for tests and modules within
     rootDir: '../../',
+    setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
+    moduleNameMapper: {
+        '\\.(css|scss)$': 'identity-obj-proxy',
+        '\\.(svg|png)': path.resolve(__dirname, 'jestEmptyComponent.tsx'),
+    },
 
     // All imported modules in your tests should be mocked automatically
     // automock: false,

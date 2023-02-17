@@ -30,12 +30,8 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
     };
 
     const fileLoader = {
-        test: /\.(png|jpe?g|gif)$/i,
-        use: [
-            {
-                loader: 'file-loader',
-            },
-        ],
+        test: /\\.(png|jp(e*)g|gif)$/,
+        use: ['file-loader'],
     };
 
     const styleLoader = {
