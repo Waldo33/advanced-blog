@@ -1,0 +1,6 @@
+name: Github Actions
+on: [push]
+jobs:
+  Explore-Github-Actions:
+    runs-on: ubuntu-latest
+    steps:
