@@ -7,10 +7,6 @@
     text-align: center;
 }
 
-.collapsed {
-    width: var(--sidebar-width-collapsed);
-}
-
 .switchers {
     position: absolute;
     bottom: 20px;
@@ -24,4 +20,41 @@
 
 .expand {
     fill: var(--bg-color);
+}
+
+.links {
+    margin: 20px 0 0 30px;
+    align-items: start;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon {
+    width: 30px;
+    fill: var(--inverted-primary-color);
+}
+
+.collapsed {
+    width: var(--sidebar-width-collapsed);
+
+    .links {
+        margin: 20px 0 0 20px;
+    }
+
+    .link {
+        gap: 0;
+    }
+
+    span {
+        opacity: 0;
+        transition: opacity 0.2s linear;
+        width: 0;
+    }
 }
