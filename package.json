@@ -17,6 +17,9 @@
     "test:ui": "loki test --port 6006",
     "test:ui:ok": "npx loki approve",
     "test:ui:ci": "loki --requireReference --reactUri file:./storybook-static",
+    "test:ui:json": "node scripts/generate-visual-json-report.js",
+    "test:ui:html": "reg-cli -g --from .loki/report.json --report .loki/report.html",
+    "test:ui:report": "npm run test:ui:json && npm run test:ui:html",
     "storybook": "start-storybook -p 6006 -c ./config/storybook",
     "storybook:build": "build-storybook -c ./config/storybook"
   },
@@ -71,6 +74,7 @@
     "react-i18next": "^11.15.5",
     "react-refresh": "^0.12.0",
     "react-refresh-webpack-plugin": "^0.1.0",
+    "reg-cli": "^0.17.7",
     "regenerator-runtime": "^0.13.9",
     "sass": "^1.49.9",
     "sass-loader": "^12.6.0",
