@@ -1,6 +1,7 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { FC } from 'react';
 import { useTranslation } from 'react-i18next';
+import { BugButton } from 'app/providers/ErrorBoundary';
 import cls from './NotFoundPage.module.scss';
 
 interface NotFoundPageProps {
@@ -11,6 +12,7 @@ export const NotFoundPage: FC<NotFoundPageProps> = ({ className }) => {
     return (
         <div className={classNames(cls.NotFoundPage, {}, [className])}>
             {t('404 Страница не найдена')}
+            <BugButton />
         </div>
     );
 };
