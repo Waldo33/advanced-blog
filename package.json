@@ -16,8 +16,8 @@
     "test:unit": "jest --config ./config/jest/jest.config.ts",
     "test:ui": "npx loki test",
     "test:ui:ok": "npx loki approve",
-    "test:ui:ci": "loki update --requireReference --reactUri file:./storybook-static",
-    "storybook": "start-storybook -p 6006 -c ./config/storybook",
+    "test:ui:ci": "loki --requireReference --reactUri file:./storybook-static",
+    "storybook": "start-storybook -p 6006 -c ./config/storybook  --host 0.0.0.0",
     "storybook:build": "build-storybook -c ./config/storybook"
   },
   "license": "ISC",
@@ -96,14 +96,14 @@
     },
     "configurations": {
       "chrome.laptop": {
-        "target": "chrome.app",
+        "target": "chrome.docker",
         "width": 1366,
         "height": 768,
         "deviceScaleFactor": 1,
         "mobile": false
       },
       "chrome.iphone7": {
-        "target": "chrome.app",
+        "target": "chrome.docker",
         "preset": "iPhone 7"
       }
     }
