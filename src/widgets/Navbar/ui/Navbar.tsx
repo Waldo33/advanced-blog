@@ -26,6 +26,7 @@ export const Navbar: FC<NavbarProps> = ({ className }) => {
                 <Button onClick={onOpenModal} theme={ThemeButton.CLEAR_INVERTED}>
                     {t('Войти')}
                 </Button>
+                {/* eslint-disable-next-line i18next/no-literal-string */}
                 <Modal isOpen={isAuthModal} onClose={onCloseModal}>
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, ipsa?
                 </Modal>
