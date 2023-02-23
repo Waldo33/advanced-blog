@@ -7,5 +7,8 @@
   "Что-то пошло не так...": "Something went wrong...",
   "Обновить страницу": "Reload page",
   "Вызвать ошибку": "Throw error",
-  "Войти": "Sign in"
+  "Войти": "Sign in",
+  "value": "value",
+  "increment": "increment",
+  "decrement": "decrement"
 }
