@@ -8,7 +8,7 @@ const AboutPage: FC = () => {
     return (
         <div>
             {t('О сайте')}
-            <Counter />
+            {/* <Counter /> */}
         </div>
     );
 };
