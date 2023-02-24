@@ -10,5 +10,8 @@
   "Войти": "Sign in",
   "value": "value",
   "increment": "increment",
-  "decrement": "decrement"
+  "decrement": "decrement",
+  "Введите текст": "Enter the text",
+  "Логин": "Username",
+  "Пароль": "Password"
 }
