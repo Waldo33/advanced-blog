@@ -15,11 +15,6 @@ const AboutPage: FC = () => {
         <div>
             {t('О сайте')}
             {/* <Counter /> */}
-            <Input
-                placeholder={t('Введите текст')}
-                value={value}
-                onChange={onChange}
-            />
         </div>
     );
 };
