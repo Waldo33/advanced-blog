@@ -25,5 +25,14 @@
       "password": "123"
     }
   ],
-  "profile": { "name": "typicode" }
+  "profile": {
+    "first": "Евгений",
+    "lastname": "Церковников",
+    "age": 21,
+    "currency": "RUB",
+    "country": "Russia",
+    "city": "Vologda",
+    "username": "admin",
+    "avatar": "https://cs13.pikabu.ru/post_img/big/2022/12/19/9/1671460372173120656.jpg"
+  }
 }
