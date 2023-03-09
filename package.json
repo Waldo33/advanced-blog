@@ -103,6 +103,7 @@
     "react-router-dom": "^6.2.1"
   },
   "loki": {
+    "fetchFailIgnore": "http://localhost:8000/profile",
     "looks-same": {
       "ignoreCaret": true
     },
