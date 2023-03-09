@@ -15,7 +15,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   disabled?: boolean;
 }
 export const Button: FC<ButtonProps> = memo(({
-    className, theme, disabled, ...props
+    className, theme = ThemeButton.OUTLINE, disabled, ...props
 }: ButtonProps) => (
     <button
         type="button"

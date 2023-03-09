@@ -22,6 +22,8 @@ Normal.decorators = [StoreDecorator({
     loginForm: {
         username: '123',
         password: '123',
+        isLoading: false,
+        error: undefined,
     },
 })];
 
@@ -32,6 +34,7 @@ WithError.decorators = [StoreDecorator({
         username: '123',
         password: '123',
         error: 'ERROR',
+        isLoading: false,
     },
 })];
 
@@ -39,6 +42,9 @@ export const Loading = Template.bind({});
 Loading.args = {};
 Loading.decorators = [StoreDecorator({
     loginForm: {
+        username: '123',
+        password: '123',
+        error: undefined,
         isLoading: true,
     },
 })];
@@ -49,5 +55,7 @@ Dark.decorators = [StoreDecorator({
     loginForm: {
         username: '123',
         password: '123',
+        isLoading: false,
+        error: undefined,
     },
 }), ThemeDecorator(Theme.DARK)];
