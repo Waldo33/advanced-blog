@@ -26,10 +26,10 @@
     }
   ],
   "profile": {
-    "first": "Евгений",
-    "lastname": "Церковников",
+    "first": "Eugene",
+    "lastname": "Tserkovnikov",
     "age": 21,
-    "currency": "RUB",
+    "currency": "USD",
     "country": "Russia",
     "city": "Vologda",
     "username": "admin",

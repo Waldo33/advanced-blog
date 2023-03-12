@@ -41,7 +41,7 @@ module.exports = {
         'import/no-extraneous-dependencies': 'off',
         'no-underscore-dangle': 'off',
         'i18next/no-literal-string': [
-            'error', { markupOnly: true, ignoreAttribute: ['data-testid', 'to', 'fallback'] },
+            'error', { markupOnly: true, ignoreAttribute: ['data-testid', 'to', 'fallback', 'align', 'alt'] },
         ],
         'max-len': ['error', { ignoreComments: true, code: 120 }],
         'jsx-a11y/no-static-element-interactions': 'off',
@@ -54,6 +54,7 @@ module.exports = {
     globals: {
         __IS_DEV__: true,
         __API__: true,
+        __PROJECT__: true,
     },
     overrides: [
         {

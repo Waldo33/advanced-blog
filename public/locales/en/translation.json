@@ -17,5 +17,12 @@
   "Авторизация": "Authorization",
   "Вы ввели неверный логин или пароль": "You're entered wrong username or password",
   "Выйти": "Logout",
-  "Profile Page": "Profile Page"
+  "Profile Page": "Profile Page",
+  "INCORRECT_USER_DATA": "Firstname or lastname is invalid",
+  "INCORRECT_USERNAME": "Username is invalid",
+  "INCORRECT_AGE": "Age is invalid",
+  "INCORRECT_CITY": "City is invalid",
+  "INCORRECT_AVATAR": "Avatar URL is invalid",
+  "NO_DATA": "No user data",
+  "SERVER_ERROR": "Internal server error"
 }
