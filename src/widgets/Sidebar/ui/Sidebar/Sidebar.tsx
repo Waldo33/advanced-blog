@@ -33,21 +33,21 @@ export const Sidebar = memo(({ className }: SidebarProps) => {
             data-testid="Sidebar"
             className={classNames(cls.Sidebar, { [cls.collapsed]: collapsed }, [className])}
         >
-            <Button data-testid="sidebar-toggle" theme={ThemeButton.CLEAR} onClick={onToggle}>
-                {collapsed
-                    ? (
-                        <Expand className={cls.expand} width={40} />
-                    )
-                    : (
-                        <Shrink className={cls.expand} width={40} />
-                    )}
-            </Button>
             <div className={cls.links}>
                 {itemsList}
             </div>
             <div className={cls.switchers}>
                 <ThemeSwitcher />
                 <LangSwitcher />
+                <Button data-testid="sidebar-toggle" theme={ThemeButton.CLEAR} onClick={onToggle}>
+                    {collapsed
+                        ? (
+                            <Expand className={cls.expand} width={40} />
+                        )
+                        : (
+                            <Shrink className={cls.expand} width={40} />
+                        )}
+                </Button>
             </div>
         </div>
     );

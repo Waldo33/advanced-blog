@@ -18,6 +18,7 @@
   "Вы ввели неверный логин или пароль": "You're entered wrong username or password",
   "Выйти": "Logout",
   "Profile Page": "Profile Page",
+  "Articles Page": "Articles Page",
   "INCORRECT_USER_DATA": "Firstname or lastname is invalid",
   "INCORRECT_USERNAME": "Username is invalid",
   "INCORRECT_AGE": "Age is invalid",
