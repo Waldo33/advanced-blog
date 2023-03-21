@@ -13,12 +13,16 @@ interface TextProps {
     text?: string;
     theme?: TextTheme;
     align?: 'center' | 'left' | 'right';
+    size?: 'size_m' | 'size_l'
 }
 export const Text: FC<TextProps> = memo(({
-    className, text, title, theme = TextTheme.PRIMARY, align = 'left',
-}: TextProps) => (
-    <div className={classNames(cls.TextWrapper, {}, [className, cls[theme], cls[align]])}>
-        {title && <p className={cls.title}>{title}</p>}
-        {text && <p className={cls.text}>{text}</p>}
-    </div>
-));
+    className, text, title, theme = TextTheme.PRIMARY, align = 'left', size = 'size_m',
+}: TextProps) => {
+    const additional = [className, cls[theme], cls[align], cls[size]];
+    return (
+        <div className={classNames(cls.TextWrapper, {}, additional)}>
+            {title && <p className={cls.title}>{title}</p>}
+            {text && <p className={cls.text}>{text}</p>}
+        </div>
+    );
+});
