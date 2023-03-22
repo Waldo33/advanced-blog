@@ -1,4 +1,6 @@
-import React, { FC, memo, useEffect } from 'react';
+import React, {
+    FC, memo, useCallback, useEffect,
+} from 'react';
 import { classNames } from 'shared/lib/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import { DynamicModuleLoader, ReducersList } from 'shared/lib/components/DynamicModuleLoader/DynamicModuleLoader';
@@ -9,6 +11,10 @@ import { Skeleton } from 'shared/ui/Skeleton/Skeleton';
 import { Avatar } from 'shared/ui/Avatar/Avatar';
 import CalendarIcon from 'shared/assets/icons/calendar-solid.svg';
 import EyeIcon from 'shared/assets/icons/eye-solid.svg';
+import { ArticleBlock } from 'entities/Article/model/types/article';
+import { ArticleCodeBlockComponent } from 'entities/Article/ui/ArticleCodeBlockComponent/ArticleCodeBlockComponent';
+import { ArticleImageBlockComponent } from 'entities/Article/ui/ArticleImageBlockComponent/ArticleImageBlockComponent';
+import { ArticleTextBlockComponent } from 'entities/Article/ui/ArticleTextBlockComponent/ArticleTextBlockComponent';
 import { fetchArticleById } from '../../model/services/fetchArticleById/fetchArticleById';
 import {
     getArticleDetailsData,
@@ -33,6 +39,19 @@ export const ArticleDetails: FC<ArticleDetailsProps> = memo(({ className, id, ..
     // const isLoading = true;
     const error = useSelector(getArticleDetailsError);
     const article = useSelector(getArticleDetailsData);
+
+    const renderBlock = useCallback((block: ArticleBlock) => {
+        switch (block.type) {
+        case 'CODE':
+            return <ArticleCodeBlockComponent className={cls.block} block={block} />;
+        case 'IMAGE':
+            return <ArticleImageBlockComponent className={cls.block} block={block} />;
+        case 'TEXT':
+            return <ArticleTextBlockComponent className={cls.block} block={block} />;
+        default:
+            return null;
+        }
+    }, []);
 
     useEffect(() => {
         dispatch(fetchArticleById(id));
@@ -93,6 +112,7 @@ export const ArticleDetails: FC<ArticleDetailsProps> = memo(({ className, id, ..
                     <CalendarIcon height={20} />
                     <Text text={article?.createdAt} />
                 </div>
+                {article?.blocks.map(renderBlock)}
             </>
         );
     }

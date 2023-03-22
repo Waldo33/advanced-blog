@@ -18,10 +18,17 @@
   display: flex;
   align-items: center;
   gap: 5px;
+  svg {
+    fill: var(--primary-color);
+  }
 }
 
 .avatarWrapper {
   display: flex;
   width: 100%;
   justify-content: center;
+}
+
+.block {
+  margin-top: 16px;
 }
