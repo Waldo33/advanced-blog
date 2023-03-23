@@ -13,8 +13,8 @@ export const ArticleCodeBlockComponent: React.FC<ArticleCodeBlockComponentProps>
     { className, block, ...props }: ArticleCodeBlockComponentProps,
 ) => (
     <div className={classNames(cls.ArticleCodeBlockComponent, {}, [className])} {...props}>
-        <Code>
-            {block.code}
-        </Code>
+        <Code
+            text={block.code}
+        />
     </div>
 ));
