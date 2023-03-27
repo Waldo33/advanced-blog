@@ -13,7 +13,7 @@
     "serve:build": "npm run build:prod && serve -s build",
     "lint:ts": "eslint \"**/*.{ts,tsx}\"",
     "lint:ts:fix": "eslint \"**/*.{ts,tsx}\" --fix",
-    "lint:scss": "npx stylelint \"**/*.scss\"",
+    "lint:scss": "npx stylelint \"**/*.scss\" --formatter 'unix'",
     "lint:scss:fix": "npx stylelint \"**/*.scss\" --fix",
     "test:unit": "jest --config ./config/jest/jest.config.ts",
     "test:ui": "loki test --port 6006",
