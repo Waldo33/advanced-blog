@@ -14,6 +14,7 @@ const profileData = {
     currency: Currency.RUB,
     city: 'Moscow',
     avatar: '123',
+    id: '1',
 };
 describe('fetchProfileData.test', () => {
     test('success', async () => {

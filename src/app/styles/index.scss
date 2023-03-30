@@ -22,6 +22,7 @@ body {
 }
 
 .page-wrapper {
+    flex-shrink: 100;
     flex-grow: 1;
     padding: 20px;
     width: 100%;

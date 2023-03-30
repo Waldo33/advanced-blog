@@ -14,6 +14,7 @@ describe('profileSlice.test', () => {
         currency: Currency.RUB,
         city: 'Moscow',
         avatar: '123',
+        id: '1',
     };
 
     test('test set readonly', () => {
