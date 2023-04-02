@@ -82,7 +82,7 @@ export const Input: FC<InputProps> = memo((props: InputProps) => {
                     showCaret && (
                         <span
                             className={cls.caret}
-                            style={{ left: `${caretPosition * 9}px` }}
+                            style={{ left: `${caretPosition * 8}px` }}
                         />
                     )
                 }

@@ -2,8 +2,17 @@ import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import { Article } from 'entities/Article';
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-import ArticleDetailsPage from './ArticleDetailsPage';
+import { ArticleListItem } from './ArticleListItem';
+
+export default {
+    title: 'entities/Article/ArticleListItem',
+    component: ArticleListItem,
+    argTypes: {
+        backgroundColor: { control: 'color' },
+    },
+} as ComponentMeta<typeof ArticleListItem>;
+
+const Template: ComponentStory<typeof ArticleListItem> = (args) => <ArticleListItem {...args} />;
 
 const article: Article = {
     id: '1',
@@ -45,7 +54,7 @@ const article: Article = {
                 + 'средствами JavaScript, приведённый на этом ресурсе. '
                 + 'Этот пример можно запустить и средствами данного ресурса (ищите кнопку Try it Yourself)'
                 + ', но мы поступим немного иначе. А именно, создадим в каком-нибудь '
-                + 'текстовом редакторе (например — в VS Code или в Notepad++) '
+                + 'текстовом редакторе (например - в VS Code или в Notepad++) '
                 + 'новый файл, который назовём hello.html, и добавим в него следующий код:',
             ],
         },
@@ -139,20 +148,15 @@ const article: Article = {
         },
     ],
 };
-export default {
-    title: 'shared/ArticleDetailsPage',
-    component: ArticleDetailsPage,
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
-} as ComponentMeta<typeof ArticleDetailsPage>;
 
-const Template: ComponentStory<typeof ArticleDetailsPage> = (args) => <ArticleDetailsPage {...args} />;
+export const Small = Template.bind({});
+Small.args = {
+    view: 'SMALL',
+    article,
+};
 
-export const Normal = Template.bind({});
-Normal.args = {};
-Normal.decorators = [StoreDecorator({
-    articleDetails: {
-        data: article,
-    },
-})];
+export const Big = Template.bind({});
+Big.args = {
+    view: 'BIG',
+    article,
+};

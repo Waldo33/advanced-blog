@@ -1,0 +1,124 @@
+.BIG {
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .user {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .title {
+        margin-top: 10px;
+    }
+
+    .types {
+        margin-bottom: 10px;
+    }
+
+    .image {
+        width: 100%;
+        height: 250px;
+        object-fit: contain;
+    }
+
+    .description {
+        p {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-clamp: 3;
+        }
+    }
+
+    .footer {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .viewsWrapper {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+    }
+}
+
+.SMALL {
+    width: 200px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+
+    .imageWrapper {
+        width: 100%;
+        height: 200px;
+        position: relative;
+    }
+
+    .image {
+        width: 100%;
+    }
+
+    .date {
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+        position: absolute;
+        top: -100%;
+        right: -100%;
+        padding: 2px 5px;
+        border-radius: 0 0 0 5px;
+        background: var(--card-bg);
+    }
+
+    .title {
+        margin-top: 8px;
+
+        p {
+            width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    .infoWrapper {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 8px;
+
+        .types p {
+            width: 100px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .viewsWrapper {
+            display: flex;
+        }
+
+        .views {
+            margin-left: auto;
+            margin-right: 5px;
+        }
+    }
+
+    &:hover {
+        opacity: 0.9;
+        transition: all 0.3s ease-in-out;
+        transform: scale(1.01);
+
+        .date {
+            opacity: 1;
+            top: -1px;
+            right: -1px;
+            transition: all 0.3s ease-in-out;
+        }
+    }
+}

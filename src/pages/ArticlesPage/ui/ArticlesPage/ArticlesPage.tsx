@@ -1,6 +1,7 @@
 import { classNames } from 'shared/lib/classNames/classNames';
 import { FC, memo } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Article, ArticleList } from 'entities/Article';
 import cls from './ArticlesPage.module.scss';
 
 interface ArticlesPageProps {
@@ -12,7 +13,7 @@ const ArticlesPage: FC<ArticlesPageProps> = ({ className }) => {
 
     return (
         <div className={classNames(cls.ArticlesPage, {}, [className])}>
-            {t('ARTICLES PAGE')}
+            {t('Articles Page')}
         </div>
     );
 };

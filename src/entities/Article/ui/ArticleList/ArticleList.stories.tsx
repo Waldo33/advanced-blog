@@ -2,8 +2,17 @@ import React from 'react';
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 
 import { Article } from 'entities/Article';
-import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator';
-import ArticleDetailsPage from './ArticleDetailsPage';
+import { ArticleList } from './ArticleList';
+
+export default {
+    title: 'entities/Article/ArticleList',
+    component: ArticleList,
+    argTypes: {
+        backgroundColor: { control: 'color' },
+    },
+} as ComponentMeta<typeof ArticleList>;
+
+const Template: ComponentStory<typeof ArticleList> = (args) => <ArticleList {...args} />;
 
 const article: Article = {
     id: '1',
@@ -139,20 +148,24 @@ const article: Article = {
         },
     ],
 };
-export default {
-    title: 'shared/ArticleDetailsPage',
-    component: ArticleDetailsPage,
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
-} as ComponentMeta<typeof ArticleDetailsPage>;
 
-const Template: ComponentStory<typeof ArticleDetailsPage> = (args) => <ArticleDetailsPage {...args} />;
+export const BIG = Template.bind({});
+BIG.args = {
+    view: 'BIG',
+    isLoading: false,
+    articles: [article],
+};
 
-export const Normal = Template.bind({});
-Normal.args = {};
-Normal.decorators = [StoreDecorator({
-    articleDetails: {
-        data: article,
-    },
-})];
+export const SMALL = Template.bind({});
+SMALL.args = {
+    view: 'SMALL',
+    isLoading: false,
+    articles: [article],
+};
+
+export const Loading = Template.bind({});
+Loading.args = {
+    view: 'SMALL',
+    isLoading: true,
+    articles: [article],
+};

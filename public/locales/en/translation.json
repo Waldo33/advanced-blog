@@ -17,8 +17,8 @@
   "Авторизация": "Authorization",
   "Вы ввели неверный логин или пароль": "You're entered wrong username or password",
   "Выйти": "Logout",
-  "Profile Page": "Profile Page",
-  "Articles Page": "Articles Page",
+  "Profile Page": "Profile",
+  "Articles Page": "Articles",
   "INCORRECT_USER_DATA": "Firstname or lastname is invalid",
   "INCORRECT_USERNAME": "Username is invalid",
   "INCORRECT_AGE": "Age is invalid",
@@ -31,5 +31,7 @@
   "Комментарии": "Комментарии",
   "Нет комментариев": "Нет комментариев",
   "Введите текст комментария": "Введите текст комментария",
-  "Отправить": "Отправить"
+  "Отправить": "Отправить",
+  "Читать далее": "Читать далее",
+  "К списку статей": "К списку статей"
 }
