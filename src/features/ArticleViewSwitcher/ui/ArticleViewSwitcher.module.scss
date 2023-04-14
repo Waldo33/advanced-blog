@@ -1,0 +1,8 @@
+.ArticleViewSwitcher {
+    display: flex;
+    gap: 5px;
+
+    .selected {
+        fill: var(--primary-color);
+    }
+}
