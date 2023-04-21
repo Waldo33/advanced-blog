@@ -2,6 +2,7 @@ import { FC, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Counter } from 'entities/Counter';
 import { Input } from 'shared/ui/Input';
+import { Page } from 'widgets/Page';
 
 const AboutPage: FC = () => {
     const { t } = useTranslation();
@@ -12,10 +13,10 @@ const AboutPage: FC = () => {
     };
 
     return (
-        <div>
+        <Page>
             {t('О сайте')}
             {/* <Counter /> */}
-        </div>
+        </Page>
     );
 };
 

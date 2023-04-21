@@ -4,6 +4,7 @@ import { Article } from 'entities/Article';
 import { ArticlesPageSchema } from 'pages/ArticlesPage';
 import { ArticleView } from 'entities/Article/model/types/article';
 import { fetchArticlesList } from 'pages/ArticlesPage/model/services/fetchArticlesList/fetchArticlesList';
+import { ARTICLE_VIEW_LOCALSTORAGE_KEY } from 'shared/const';
 
 const articlesAdapter = createEntityAdapter<Article>({
     selectId: (article) => article.id,
@@ -21,10 +22,19 @@ const articlesPageSlice = createSlice({
         view: 'SMALL',
         ids: [],
         entities: {},
+        page: 1,
+        hasMore: true,
     }),
     reducers: {
         setView: (state, action: PayloadAction<ArticleView>) => {
             state.view = action.payload;
+        },
+        setPage: (state, action: PayloadAction<number>) => {
+            state.page = action.payload;
+        },
+        initState: (state, action: PayloadAction<ArticleView>) => {
+            state.view = action.payload;
+            state.limit = action.payload === 'BIG' ? 4 : 9;
         },
     },
     extraReducers: (builder) => {
@@ -35,7 +45,8 @@ const articlesPageSlice = createSlice({
             })
             .addCase(fetchArticlesList.fulfilled, (state, action: PayloadAction<Article[]>) => {
                 state.isLoading = false;
-                articlesAdapter.setAll(state, action.payload);
+                articlesAdapter.addMany(state, action.payload);
+                state.hasMore = action.payload.length > 0;
             })
             .addCase(fetchArticlesList.rejected, (state) => {
                 state.isLoading = false;
