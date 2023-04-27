@@ -37,6 +37,7 @@ export const ArticleViewSwitcher: FC<ArticleViewSwitcherProps> = (
             {
                 viewItems.map((viewItem) => (
                     <Button
+                        key={viewItem.view}
                         onClick={onClick(viewItem.view)}
                         theme={ThemeButton.CLEAR}
                     >
