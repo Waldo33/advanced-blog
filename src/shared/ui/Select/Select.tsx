@@ -4,21 +4,22 @@ import {
 } from 'react';
 import cls from './Select.module.scss';
 
-export interface SelectOption {
-    value: string;
+export interface SelectOption<T extends string> {
+    value: T;
     content: string;
 }
-interface SelectProps {
+interface SelectProps<T extends string> {
     className?: string;
     label?: string;
-    options?: SelectOption[];
-    value?: string;
-    onChange?: (value: string) => void;
+    options?: SelectOption<T>[];
+    value?: T;
+    onChange?: (value: T) => void;
     readonly?: boolean;
+    withoutEnding?: boolean;
 }
-export const Select: FC<SelectProps> = memo(({
-    className, label, options, value, onChange, readonly,
-}: SelectProps) => {
+export const Select = <T extends string>({
+    className, label, options, value, onChange, readonly, withoutEnding,
+}: SelectProps<T>) => {
     const optionList = useMemo(() => options?.map((opt) => (
         <option
             value={opt.value}
@@ -31,7 +32,7 @@ export const Select: FC<SelectProps> = memo(({
 
     const onChangeHandler = (e: ChangeEvent<HTMLSelectElement>) => {
         if (onChange) {
-            onChange(e.target.value);
+            onChange(e.target.value as T);
         }
     };
 
@@ -44,7 +45,7 @@ export const Select: FC<SelectProps> = memo(({
             {
                 label && (
                     <span className={cls.label}>
-                        {`${label}:~$`}
+                        {withoutEnding ? label : `${label}:~$`}
                     </span>
                 )
             }
@@ -58,4 +59,4 @@ export const Select: FC<SelectProps> = memo(({
             </select>
         </div>
     );
-});
+};

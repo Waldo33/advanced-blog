@@ -14,11 +14,11 @@
   "articles": [
     {
       "id": "1",
-      "title": "Javascript news",
+      "title": "Javascript news 2.0",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/2048px-Unofficial_JavaScript_logo_2.svg.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 13567,
+      "createdAt": "26.04.2022",
       "userId": "1",
       "type": [
         "IT"
@@ -86,11 +86,11 @@
     },
     {
       "id": "2",
-      "title": "Javascript news",
-      "subtitle": "Что нового в JS за 2022 год?",
+      "title": "Python news",
+      "subtitle": "Что нового в Python за 2022 год?",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/2048px-Unofficial_JavaScript_logo_2.svg.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 102,
+      "createdAt": "12.02.2022",
       "userId": "1",
       "type": [
         "IT"
@@ -158,11 +158,11 @@
     },
     {
       "id": "3",
-      "title": "Javascript news",
+      "title": "Javascript news 3.0",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/2048px-Unofficial_JavaScript_logo_2.svg.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 10322,
+      "createdAt": "26.02.2023",
       "userId": "1",
       "type": [
         "IT"
@@ -230,11 +230,11 @@
     },
     {
       "id": "4",
-      "title": "Javascript news",
+      "title": "Go news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/2048px-Unofficial_JavaScript_logo_2.svg.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 10,
+      "createdAt": "26.02.2020",
       "userId": "1",
       "type": [
         "IT"
@@ -302,11 +302,11 @@
     },
     {
       "id": "5",
-      "title": "Javascript news",
+      "title": "Kotlin news",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/2048px-Unofficial_JavaScript_logo_2.svg.png",
-      "views": 1022,
-      "createdAt": "26.02.2022",
+      "views": 52,
+      "createdAt": "26.01.2022",
       "userId": "1",
       "type": [
         "IT"
@@ -374,14 +374,14 @@
     },
     {
       "id": "6",
-      "title": "Javascript news",
+      "title": "Экономическая статья",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/2048px-Unofficial_JavaScript_logo_2.svg.png",
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
       "type": [
-        "IT"
+        "ECONOMICS"
       ],
       "blocks": [
         {
@@ -446,14 +446,14 @@
     },
     {
       "id": "7",
-      "title": "Javascript news",
+      "title": "Научная статья",
       "subtitle": "Что нового в JS за 2022 год?",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/2048px-Unofficial_JavaScript_logo_2.svg.png",
       "views": 1022,
       "createdAt": "26.02.2022",
       "userId": "1",
       "type": [
-        "IT"
+        "SCIENCE"
       ],
       "blocks": [
         {

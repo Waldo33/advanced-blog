@@ -1,5 +1,7 @@
 import { User } from 'entities/User';
 
+export type ArticleSortField = 'views' | 'title' | 'createdAt'
+
 export type ArticleBlockType = 'CODE' | 'IMAGE' | 'TEXT'
 
 export type ArticleView = 'BIG' | 'SMALL'
@@ -26,7 +28,7 @@ export interface ArticleTextBlock extends ArticleBlockBase {
 
 export type ArticleBlock = ArticleCodeBlock | ArticleImageBlock | ArticleTextBlock
 
-export type ArticleType = 'IT' | 'SCIENCE' | 'ECONOMICS'
+export type ArticleType = 'ALL' | 'IT' | 'SCIENCE' | 'ECONOMICS'
 
 export interface Article {
     id: string;

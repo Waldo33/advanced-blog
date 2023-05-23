@@ -2,6 +2,7 @@ import { classNames } from 'shared/lib/classNames/classNames';
 import { memo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ArticleListItemSkeleton } from 'entities/Article/ui/ArticleListItem/ArticleListItemSkeleton';
+import { Text } from 'shared/ui/Text/Text';
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem';
 import cls from './ArticleList.module.scss';
 import { Article, ArticleView } from '../../model/types/article';
@@ -27,6 +28,20 @@ export const ArticleList = memo((props: ArticleListProps) => {
             view={view}
         />
     );
+
+    if (!isLoading && !articles.length) {
+        return (
+            <div
+                className={classNames(cls.ArticleList, {}, [className, cls[view]])}
+                {...otherProps}
+            >
+                <Text
+                    size="size_l"
+                    title={t('Статьи не найдены')}
+                />
+            </div>
+        );
+    }
 
     return (
         <div
